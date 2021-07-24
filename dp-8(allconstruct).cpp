@@ -8,7 +8,7 @@ bool constructstring(string target,vector<string>v)
    if(target.size()==0){
     for(int i=0;i<vec.size();i++)cout<<vec[i]<<" ";    //prints the construction way
     cout<<endl;
-    vec.pop_back();
+    if(vec.size())vec.pop_back();
     flag=true;
     return true;
     }
@@ -22,7 +22,7 @@ bool constructstring(string target,vector<string>v)
          constructstring(s,v);
      }
    }
-  vec.pop_back();
+  if(vec.size())vec.pop_back();
   return false;
 }
 int main()
